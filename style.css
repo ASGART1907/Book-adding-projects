@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', cursive;
+    user-select: none;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:deepskyblue;
+    min-height: 100vh;
+}
+
+.container{
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    background-color: steelblue;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+} 
+
+.container .input-container{
+    position: relative;
+    width: 35%;
+    height: 95%;
+    background-color:powderblue;
+    border-radius: 5px;
+    overflow:hidden;
+}
+
+.container .books{
+    position: relative;
+    width: 60%;
+    height: 95%;
+    background-color:lightsteelblue;
+    border-radius: 5px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.input-container .inputs{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    width: 95%;
+    height: 98%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    transform: translate(-50%,-50%);
+    margin-top: 10px;
+}
+
+.input-container .inputs input:nth-child(1){
+    margin-top: 100px;
+}
+
+
+
+.input-container .inputs input{
+    width: 100%;
+    font-size: 1rem;
+    background-color: dodgerblue;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    padding: 7px 13px 7px 13px;
+    color: floralwhite;
+    box-shadow: inset 2px 3px 5px black;
+    font-weight: bold;
+}
+
+.input-container .inputs textarea{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding:10px;
+    font-size: 1rem;
+    border-radius: 10px;
+    box-shadow: inset 2px 3px 5px black;
+}
+
+.input-container .inputs label{
+    position: relative;
+    width: 150px;
+    background-color: lightcyan;
+    padding: 5px 0 5px 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.books .book-container{
+    position: relative;
+    width: 95%;
+    height: 40%;
+    background-color:powderblue;
+    margin: 15px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 3px;
+    overflow: hidden;
+    transition:all 0.5s ease-in-out;
+}
+
+.book-container .name-author{
+    position: relative;
+    width: 99%;
+    height: 97%;
+    display: flex;
+    background-color: aliceblue;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 3px;
+}
+
+.name-author .description{
+    width: 95%;
+    height: 97%;
+    padding: 3px 5px 3px 5px;
+    overflow: hidden;
+    border-radius: 3px;
+    margin-top: 15px;
+}
+
+.book-container .name-author h4{
+    margin-top: 15px;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.book-container .name-author p{
+    font-weight: 100;
+    font-size: 12px;
+}
+
+
+.book-container .name-author strong{
+    position: absolute;
+    background-color: darkslategray;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 15px;
+    bottom: 5px;
+}
+
+.name-author i{
+    position: relative;
+    background-color: red;
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    bottom: 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    left: 45%;
+    top: -55px;
+}
+
+.name-author i:hover{
+    background-color: darkred;
+    color: white;
+    z-index: 1000;
+}
+
+.active{
+    opacity: 0;
+    transform: translateY(-100px);
+    transform: translateX(100px);
+}
+
